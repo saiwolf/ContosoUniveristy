@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model ContosoUniveristy.Pages.Courses.DeleteModel
 
 @{
@@ -26,7 +26,7 @@
             @Html.DisplayNameFor(model => model.Course.Department)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.Course.Department.Name)
+            @Html.DisplayFor(model => model.Course.Department.DepartmentID)
         </dd>
     </dl>
     <p class="text-danger">WARNING! This action cannot be undone!</p>

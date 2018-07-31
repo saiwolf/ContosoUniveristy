@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int?}"
 @model ContosoUniveristy.Pages.Courses.EditModel
 
 @{
@@ -25,7 +25,7 @@
                 <span asp-validation-for="Course.Credits" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Course.DepartmentID" class="control-label">Department</label>
+                <label asp-for="Course.DepartmentID" class="control-label"></label>
                 <select asp-for="Course.DepartmentID" class="form-control" asp-items="ViewBag.DepartmentID"></select>
                 <span asp-validation-for="Course.DepartmentID" class="text-danger"></span>
             </div>
