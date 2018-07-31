@@ -18,7 +18,7 @@ namespace ContosoUniveristy.Pages.Courses
             _context = context;
         }
 
-        public Course Course { get; set; }
+        public Course Course { get; set; }        
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
