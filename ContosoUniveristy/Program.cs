@@ -1,4 +1,5 @@
 ﻿using ContosoUniveristy.Models; // SchoolContext
+using ContosoUniveristy.Data; // DB INIT
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +19,7 @@ namespace ContosoUniveristy
                 try
                 {
                     var context = services.GetRequiredService<SchoolContext>();
-                    context.Database.EnsureCreated();
+                    DbInitializer.Initialize(context);
                 }
                 catch (Exception ex)
                 {
